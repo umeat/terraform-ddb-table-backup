@@ -72,6 +72,10 @@ resource "aws_iam_role_policy" "allow_log_creation" {
     }, 
     {
       "Action": [
+        "dynamodb:DescribeStream",
+        "dynamodb:GetRecords",
+        "dynamodb:GetShardIterator",
+        "dynamodb:ListStreams",
         "dynamodb:Scan"
       ],
       "Effect": "Allow",
