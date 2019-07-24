@@ -10,7 +10,7 @@ resource "aws_lambda_function" "backup_ddb_table" {
   handler          = "backup_ddb_table.lambda_handler"
   timeout          = "30"
   runtime          = "python2.7"
-  source_code_hash = "${base64sha256(file("${path.module}/backup_ddb_table_lambda.zip"))}"
+  source_code_hash = "${base64sha256(file("${path.module}/backup_ddb_table.py"))}"
 
   environment {
     variables = {
